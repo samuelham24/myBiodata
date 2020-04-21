@@ -1,0 +1,198 @@
+.part3	{ /*box semu navigator link*/
+	top: 0;
+  left: 0;
+  right: 0;
+	height: auto;
+	background: rgba(255, 255, 255, 0.001);
+	/*opacity: 0.7;*/
+	border-width: 0.001px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.001);
+	padding: 4%;
+	background-image: url(pict/bluegradient3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.education	{
+	width: 80%;
+	height: auto;
+	background-color: white;
+	background: rgba(255, 255, 255, 0.85);
+	/*opacity: 0.7;*/
+	margin-top: 0%;
+	margin-left: 5%;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #239B56 #2ECC71 #82E0AA;
+	border-radius: 80px;
+	padding: 3%;
+}
+
+.education h6 {
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0px;
+	text-align: center;
+	font-style: italic;
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  background-image: linear-gradient(to right, #239B56 , #2ECC71, #82E0AA);
+  top: 0;
+  bottom: 0;
+  left: 30%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 35%;
+  height: 90px;
+}
+
+/*circles*/
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border-width: 4px;
+	border-style: solid;
+	border-color: #F4D03F;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 7.5%;
+}
+.left h2,h4 {
+  text-align: right;
+  line-height: 25px;
+}
+
+/* Place the container to the right */
+.right {
+  left: 30%;
+}
+
+.right h2,h3 {
+  text-align: left;
+
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #145A32;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #145A32;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #145A32;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #145A32 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.col-content {
+  padding: 10px;
+  background-image: linear-gradient(to right, #145A32 , #1E8449, #27AE60, #27AE60,#1E8449,#145A32);
+  position: relative;
+  border-radius: 15px;
+  width: auto;
+  height: 60px;
+}
+
+.col-content h2 {
+	color: #F4D03F;
+	margin: 0px;
+}
+
+.col-content h2{
+	/*margin: 0px;*/
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.col-content h3 {
+	font-size: 15px;
+	font-style: italic;
+	color: #FCF3CF;
+}
+
+.col-content h4 {
+font-size: 15px;
+font-style: italic;
+color: #FCF3CF;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+  left: 31px;
+  }
+  
+  .container {
+  width: 80%;
+  padding-left: 50px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}

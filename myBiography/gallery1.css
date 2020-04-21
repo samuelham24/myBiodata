@@ -1,0 +1,164 @@
+.navigasi	{
+	background-image: url(pict/blue.png);
+	position: fixed;
+	top: 0;
+    left: 0;
+    right: 0;
+	z-index: 1000;
+	border-width: 0.001px;
+	border-style: solid;
+	border-color: white;
+}
+
+.navleft	{
+	width: 45%;
+	height: 50px;
+	border-width: 0.001px;
+	border-style: solid;
+	border-color: white;
+	margin-left: 5%;
+}
+
+.navright	{
+	width: 45%;
+	height: 50px;
+	border-width: 0.001px;
+	border-style: solid;
+	border-color: white;
+	margin-left: 0%;
+}
+
+.navleft , .navright	{
+	display: inline-block;
+}
+
+.navigasi h1, h2{
+	line-height: 5px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn a {
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.testbut	{
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	text-align: left;
+	padding: 0%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+background-image: linear-gradient(to right, #2874A6, #3498DB, #85C1E9);
+}
+
+.navigasi h1 {
+	color: white;
+	font-family: arial, verdana, sans-serif;
+	font-size: 30px;
+	font-variant: small-caps; /*Judul Huruf besar namun ukuran kombinasi */
+	font-style: italic;
+}
+
+
+.navigasi h2 {color: white;
+	font-family: arial, verdana, sans-serif;
+	font-size: 20px;
+	font-variant: small-caps; /*Judul Huruf besar namun ukuran kombinasi */
+	font-style: italic;
+
+}
+
+/*GALLERY1 SECTION*/
+body	{
+		/*background-image: url(pict/back1.jpg);*/
+		background-color: black;
+		/*background-size: contain;*/
+		 margin: 0;
+		 padding:0;
+}
+
+
+
+.part1	{ /*box semu navigator link*/
+	top: 0;
+    left: 0;
+    right: 0;
+	height: auto;
+	/*background: rgba(255, 255, 255, 0.1);*/
+	/*opacity: 0.7;*/
+	border-width: 0.01px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.01);
+	border-radius: 0px;
+	padding: 4%;
+	background-image: url(pict/vac1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.galleryslide	{
+	width: 80%;
+	height: 20%;
+	background-color: white;
+	background: rgba(255, 255, 255, 0.85);
+	/*opacity: 0.7;*/
+	margin-top: 2%;
+	margin-left: 5%;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #85C1E9 #2E86C1 #85C1E9;
+	border-radius: 80px;
+	padding: 3%;
+}
+
+.galleryslide h2{
+	text-align: center;
+}
+
+.slideshow {
+	margin: auto;
+}
+
+.mySlides {display:none;}

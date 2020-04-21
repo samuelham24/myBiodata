@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="progbar.css">
+	<title>Progbar</title>
+</head>
+
+<body onload="move()">
+
+<div class="meter">
+  <span id="myBar" onload="move()" style="width: 35%; color: white; padding-left: 1%">35%</span>
+</div>
+
+	<script type="text/javascript">
+		function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 30);
+  function frame() {
+    if (width >= 35) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+	</script>
+</body>
+</html>
